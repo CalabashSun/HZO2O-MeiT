@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2026
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{984A7CDC-E6C7-4958-8E37-9141094BF5E1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{7CA5F944-E958-4199-8089-925A7CCC5A3E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeituanApi.Core", "Libraries\MeituanApi.Core\MeituanApi.Core.csproj", "{9CF114F4-9C40-4992-BCD0-FDADD044C413}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeituanApi.Data", "Libraries\MeituanApi.Data\MeituanApi.Data.csproj", "{1DC51D31-06F8-494D-95ED-D640BC8832FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeituanApi.Services", "Libraries\MeituanApi.Services\MeituanApi.Services.csproj", "{601B95E0-ED69-405B-ABBF-2EDB0AC1C3CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeituanApi.Web", "Presentation\MeituanApi.Web\MeituanApi.Web.csproj", "{E75716F3-44E8-4857-9BB0-A14F2448581E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeituanApi.Web.Framework", "Presentation\MeituanApi.Web.Framework\MeituanApi.Web.Framework.csproj", "{FACC55A8-3990-41C3-A711-96AA5DC004A9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9CF114F4-9C40-4992-BCD0-FDADD044C413}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CF114F4-9C40-4992-BCD0-FDADD044C413}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CF114F4-9C40-4992-BCD0-FDADD044C413}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CF114F4-9C40-4992-BCD0-FDADD044C413}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DC51D31-06F8-494D-95ED-D640BC8832FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DC51D31-06F8-494D-95ED-D640BC8832FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DC51D31-06F8-494D-95ED-D640BC8832FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DC51D31-06F8-494D-95ED-D640BC8832FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{601B95E0-ED69-405B-ABBF-2EDB0AC1C3CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{601B95E0-ED69-405B-ABBF-2EDB0AC1C3CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{601B95E0-ED69-405B-ABBF-2EDB0AC1C3CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{601B95E0-ED69-405B-ABBF-2EDB0AC1C3CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E75716F3-44E8-4857-9BB0-A14F2448581E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E75716F3-44E8-4857-9BB0-A14F2448581E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E75716F3-44E8-4857-9BB0-A14F2448581E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E75716F3-44E8-4857-9BB0-A14F2448581E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FACC55A8-3990-41C3-A711-96AA5DC004A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FACC55A8-3990-41C3-A711-96AA5DC004A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FACC55A8-3990-41C3-A711-96AA5DC004A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FACC55A8-3990-41C3-A711-96AA5DC004A9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9CF114F4-9C40-4992-BCD0-FDADD044C413} = {7CA5F944-E958-4199-8089-925A7CCC5A3E}
+		{1DC51D31-06F8-494D-95ED-D640BC8832FF} = {7CA5F944-E958-4199-8089-925A7CCC5A3E}
+		{601B95E0-ED69-405B-ABBF-2EDB0AC1C3CC} = {7CA5F944-E958-4199-8089-925A7CCC5A3E}
+		{E75716F3-44E8-4857-9BB0-A14F2448581E} = {984A7CDC-E6C7-4958-8E37-9141094BF5E1}
+		{FACC55A8-3990-41C3-A711-96AA5DC004A9} = {984A7CDC-E6C7-4958-8E37-9141094BF5E1}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3B0C87F8-EA5C-4907-8DAF-17C71DC1832B}
+	EndGlobalSection
+EndGlobal
