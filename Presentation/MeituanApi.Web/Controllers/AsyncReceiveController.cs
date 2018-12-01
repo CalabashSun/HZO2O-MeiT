@@ -76,7 +76,8 @@ namespace MeituanApi.Web.Controllers
                     OriginalPrice = model.original_price,
                     DaySeq = model.day_seq.ToString(),
                     PackageBagMoney = model.package_bag_money,
-                    DinnersNumber = model.dinners_number
+                    DinnersNumber = model.dinners_number,
+                    TotalPrice = model.original_price-model.shipping_fee
                 };
 
                 if (model.delivery_time != 0)

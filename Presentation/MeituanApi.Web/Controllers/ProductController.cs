@@ -58,6 +58,22 @@ namespace MeituanApi.Web.Controllers
             }
         }
 
+        public IActionResult DealZpProduct(string zpShopId)
+        {
+            if (string.IsNullOrEmpty(zpShopId))
+            {
+                return Content("商家的id不存在");
+            }
+            //此处获取的是正品的shopId
+            var shopInfo = _meiTConfigService.GetMeiTConfig(zpShopId);
+            if (shopInfo == null)
+            {
+                return Content("商家的id不能和美团商户匹配");
+            }
+            return null;
+        }
+
+
 
         public IActionResult BatchUpdateProduct()
         {

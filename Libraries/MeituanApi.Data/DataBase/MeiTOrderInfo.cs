@@ -45,6 +45,10 @@ namespace MeituanApi.Data.DataBase
         /// 就餐人数
         /// </summary>
         public int DinnersNumber { get; set; }
+        /// <summary>
+        /// 总价 出去派送费之外的价格
+        /// </summary>
+        public decimal TotalPrice { get; set; }
 
     }
 }
