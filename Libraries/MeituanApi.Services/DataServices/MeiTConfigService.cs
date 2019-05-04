@@ -13,6 +13,8 @@ namespace MeituanApi.Services.DataServices
     {
         MeiTConfig GetMeiTConfig(string zpShopId);
 
+        MeiTConfig GetMeiTConfigByShopId(string shopId);
+
         List<MeiTConfig> AllMetTShop();
     }
 
@@ -21,6 +23,12 @@ namespace MeituanApi.Services.DataServices
         public MeiTConfig GetMeiTConfig(string zpShopId)
         {
             var selectSql = $"select * from MeiTConfig where Zp_ShopId='{zpShopId}'";
+            return _Conn.QueryFirstOrDefault<MeiTConfig>(selectSql);
+        }
+
+        public MeiTConfig GetMeiTConfigByShopId(string shopId)
+        {
+            var selectSql = $"select * from MeiTConfig where ShopId='{shopId}'";
             return _Conn.QueryFirstOrDefault<MeiTConfig>(selectSql);
         }
 

@@ -91,4 +91,10 @@ namespace MeituanApi.Data.External.Submit
         /// </summary>
         public string app_brand_code { get; set; }
     }
+
+
+    public class SShopDetail: BaseSubmit
+    {
+        public string app_poi_codes { get; set; }
+    }
 }

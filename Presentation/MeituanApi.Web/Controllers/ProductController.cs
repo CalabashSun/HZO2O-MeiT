@@ -33,6 +33,7 @@ namespace MeituanApi.Web.Controllers
         }
 
         public IActionResult FoodList(string zpShopId)
+
         {
             if (string.IsNullOrEmpty(zpShopId))
             {
@@ -110,7 +111,7 @@ namespace MeituanApi.Web.Controllers
                         if (exist != null)
                         {
                             //1.相同
-                            if (exist.MeiTUpdateTime == rFood.utime)
+                            if (exist.MeiTUpdateTime == rFood.utime&&exist.ProductPrice==rFood.price)
                             {
                                 exist.DealState = 1;
                                 continue;

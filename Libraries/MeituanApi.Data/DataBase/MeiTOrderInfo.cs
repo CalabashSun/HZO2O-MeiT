@@ -49,6 +49,10 @@ namespace MeituanApi.Data.DataBase
         /// 总价 出去派送费之外的价格
         /// </summary>
         public decimal TotalPrice { get; set; }
+        /// <summary>
+        /// 创建时间
+        /// </summary>
+        public DateTime CreateTime { get; set; }
 
     }
 }

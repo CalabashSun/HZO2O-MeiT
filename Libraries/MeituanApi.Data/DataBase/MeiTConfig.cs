@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Dapper.Contrib.Extensions;
 
 namespace MeituanApi.Data.DataBase
 {
+    [Table("MeiTConfig")]
     public  class MeiTConfig:BaseEntity
     {
         public string Name { get; set; }

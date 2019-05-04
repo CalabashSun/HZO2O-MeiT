@@ -17,6 +17,14 @@ namespace MeituanApi.Core.Configuration
         public static string orderConfirm = "https://waimaiopen.meituan.com/api/v1/order/confirm";
 
         public static string orderComment = "https://waimaiopen.meituan.com/api/v1/comment/query";
+        /// <summary>
+        /// 获取门店id
+        /// </summary>
+        public static string getShopInfo = "https://waimaiopen.meituan.com/api/v1/poi/getids";
+        /// <summary>
+        /// 批量获取门店详细信息
+        /// </summary>
+        public static string getShopDetail = "https://waimaiopen.meituan.com/api/v1/poi/mget";
 
     }
 }
