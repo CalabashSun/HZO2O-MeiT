@@ -26,6 +26,8 @@ namespace MeituanApi.Services
             builder.RegisterType<MeiTOrderProductService>().As<IMeiTOrderProductService>().InstancePerLifetimeScope();
             builder.RegisterType<MeiTOrderLogService>().As<IMeiTOrderLogService>().InstancePerLifetimeScope();
             builder.RegisterType<OrderToZpService>().As<IOrderToZpService>().InstancePerLifetimeScope();
+            builder.RegisterType<MeiTOrderPriceService>().As<IMeiTOrderPriceService>().InstancePerLifetimeScope();
+            builder.RegisterType<MeiTOrderCancelService>().As<IMeiTOrderCancelService>().InstancePerLifetimeScope();
         }
 
         public int Order { get; } = 1;

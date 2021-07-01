@@ -1,3 +1,5 @@
+D:\coProject\Meituan\MeituanApi\Presentation\MeituanApi.Web\bin\Debug\netcoreapp2.1\appsettings.Development.json
+D:\coProject\Meituan\MeituanApi\Presentation\MeituanApi.Web\bin\Debug\netcoreapp2.1\appsettings.json
 D:\coProject\Meituan\MeituanApi\Presentation\MeituanApi.Web\bin\Debug\netcoreapp2.1\MeituanApi.Web.deps.json
 D:\coProject\Meituan\MeituanApi\Presentation\MeituanApi.Web\bin\Debug\netcoreapp2.1\MeituanApi.Web.runtimeconfig.json
 D:\coProject\Meituan\MeituanApi\Presentation\MeituanApi.Web\bin\Debug\netcoreapp2.1\MeituanApi.Web.runtimeconfig.dev.json
@@ -12,9 +14,10 @@ D:\coProject\Meituan\MeituanApi\Presentation\MeituanApi.Web\bin\Debug\netcoreapp
 D:\coProject\Meituan\MeituanApi\Presentation\MeituanApi.Web\bin\Debug\netcoreapp2.1\MeituanApi.Core.pdb
 D:\coProject\Meituan\MeituanApi\Presentation\MeituanApi.Web\bin\Debug\netcoreapp2.1\MeituanApi.Data.pdb
 D:\coProject\Meituan\MeituanApi\Presentation\MeituanApi.Web\obj\Debug\netcoreapp2.1\MeituanApi.Web.csprojAssemblyReference.cache
-D:\coProject\Meituan\MeituanApi\Presentation\MeituanApi.Web\obj\Debug\netcoreapp2.1\MeituanApi.Web.csproj.CoreCompileInputs.cache
 D:\coProject\Meituan\MeituanApi\Presentation\MeituanApi.Web\obj\Debug\netcoreapp2.1\MeituanApi.Web.AssemblyInfoInputs.cache
 D:\coProject\Meituan\MeituanApi\Presentation\MeituanApi.Web\obj\Debug\netcoreapp2.1\MeituanApi.Web.AssemblyInfo.cs
+D:\coProject\Meituan\MeituanApi\Presentation\MeituanApi.Web\obj\Debug\netcoreapp2.1\MeituanApi.Web.csproj.CoreCompileInputs.cache
 D:\coProject\Meituan\MeituanApi\Presentation\MeituanApi.Web\obj\Debug\netcoreapp2.1\MeituanApi.Web.csproj.CopyComplete
 D:\coProject\Meituan\MeituanApi\Presentation\MeituanApi.Web\obj\Debug\netcoreapp2.1\MeituanApi.Web.dll
 D:\coProject\Meituan\MeituanApi\Presentation\MeituanApi.Web\obj\Debug\netcoreapp2.1\MeituanApi.Web.pdb
+D:\coProject\Meituan\MeituanApi\Presentation\MeituanApi.Web\obj\Debug\netcoreapp2.1\MeituanApi.Web.genruntimeconfig.cache

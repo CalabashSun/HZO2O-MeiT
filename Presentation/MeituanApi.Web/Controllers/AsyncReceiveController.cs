@@ -19,17 +19,20 @@ namespace MeituanApi.Web.Controllers
         private readonly IMeiTOrderProductService _meiTOrderProductService;
         private readonly IMeiTOrderLogService _meiTOrderLogService;
         private readonly IOrderToZpService _orderToZpService;
+        private readonly IMeiTOrderCancelService _orderCancelService;
 
 
         public AsyncReceiveController(IMeiTOrderInfoService meiTOrderInfoService
         ,IMeiTOrderProductService meiTOrderProductService
         ,IMeiTOrderLogService meiTOrderLogService
-        ,IOrderToZpService orderToZpService)
+        ,IOrderToZpService orderToZpService
+        ,IMeiTOrderCancelService orderCancelService)
         {
             _meiTOrderInfoService = meiTOrderInfoService;
             _meiTOrderProductService = meiTOrderProductService;
             _meiTOrderLogService = meiTOrderLogService;
             _orderToZpService = orderToZpService;
+            _orderCancelService = orderCancelService;
         }
 
 
@@ -139,11 +142,15 @@ namespace MeituanApi.Web.Controllers
             }
 
             model.detail = WebUtility.UrlDecode(model.detail);
+            model.poi_receive_detail = WebUtility.UrlDecode(model.poi_receive_detail);
+            model.extras = WebUtility.UrlDecode(model.extras);
             //构建日志参数
             var meiTOrderLog = new MeiTOrderLog
             {
                 OrderId = model.order_id,
-                OrderContext ="confrim_"+ WebUtility.UrlDecode(JsonConvert.SerializeObject(model)),
+                OrderContext = WebUtility.UrlDecode(JsonConvert.SerializeObject(model)),
+                OrderPoiReceiveDetail = model.poi_receive_detail,
+                OrderExtras = "",
                 CreateTime = DateTime.Now
             };
             _meiTOrderLogService.Add(meiTOrderLog);
@@ -169,6 +176,13 @@ namespace MeituanApi.Web.Controllers
                     TotalPrice = model.original_price - model.shipping_fee,
                     CreateTime = DateTime.Now
                 };
+                //获取商家实收
+                var shopReceive = JsonConvert.DeserializeObject<PoiReceivedDetail>(model.poi_receive_detail);
+                orderInfo.WmPoiReceive = Math.Round((decimal)shopReceive.wmPoiReceiveCent / 100, 2);
+                if (orderInfo.DinnersNumber>10||orderInfo.DinnersNumber==0)
+                {
+                    orderInfo.DinnersNumber = 1;
+                }
 
                 if (model.delivery_time != 0)
                 {
@@ -224,10 +238,11 @@ namespace MeituanApi.Web.Controllers
             {
                 OrderId = model.order_id,
                 OrderContext = "confrim_" + WebUtility.UrlDecode(JsonConvert.SerializeObject(model)),
+                OrderPoiReceiveDetail = model.poi_receive_detail,
+                OrderExtras = model.extras,
                 CreateTime = DateTime.Now
             };
             _meiTOrderLogService.Add(meiTOrderLog);
-
             var orderInfoExist = _meiTOrderInfoService.GetMeiTOrderInfo(model.order_id);
             //防止美团的重复推送
             if (orderInfoExist == null)
@@ -247,20 +262,29 @@ namespace MeituanApi.Web.Controllers
                     DaySeq = model.day_seq.ToString(),
                     PackageBagMoney = model.package_bag_money,
                     DinnersNumber = model.dinners_number,
-                    TotalPrice = model.original_price - model.shipping_fee
+                    TotalPrice = model.original_price - model.shipping_fee,
+                    CreateTime = DateTime.Now
                 };
+                //获取商家实收
+                var shopReceive = JsonConvert.DeserializeObject<PoiReceivedDetail>(model.poi_receive_detail);
+                orderInfo.WmPoiReceive = Math.Round((decimal)shopReceive.wmPoiReceiveCent / 100, 2);
+                if (orderInfo.DinnersNumber > 10 || orderInfo.DinnersNumber == 0)
+                {
+                    orderInfo.DinnersNumber = 1;
+                }
 
                 if (model.delivery_time != 0)
                 {
                     orderInfo.DeliverTime = CommonHelper.GenericTimeStamp(model.delivery_time);
                 }
+
                 orderInfo.Description = WebUtility.UrlDecode(model.caution);
                 orderInfo.Status = 2;
                 orderInfo.CreatedAt = CommonHelper.GenericTimeStamp(model.ctime);
                 _meiTOrderInfoService.Add(orderInfo);
 
                 var products = JsonConvert.DeserializeObject<List<OrderProduct>>(model.detail);
-                _orderToZpService.HandleToZp(model, products);
+
                 if (products != null && products.Count > 0)
                 {
                     foreach (var orderProduct in products)
@@ -286,6 +310,34 @@ namespace MeituanApi.Web.Controllers
                 }
 
             }
+
+            return Content("{\"data\":\"ok\"}");
+        }
+
+        [HttpGet]
+        public IActionResult OrderCancelNotify(OrderCanceled model)
+        {
+            if (string.IsNullOrEmpty(model.reason))
+            {
+                return Content("200");
+            }
+            else
+            {
+                var cancelModel = new MeiTOrderCancel
+                {
+                    OrderId = model.order_id,
+                    Reason = model.reason,
+                    ReasonCode = model.notify_type,
+                    CreateTime = DateTime.Now
+                };
+                _orderCancelService.AddCancelRecord(cancelModel);
+                return Content("{\"data\":\"ok\"}");
+            }
+        }
+
+        [HttpPost]
+        public IActionResult OrderCancelNotify()
+        {
             return Content("{\"data\":\"ok\"}");
         }
 

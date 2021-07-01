@@ -10,9 +10,10 @@ D:\coProject\Meituan\MeituanApi\Libraries\MeituanApi.Core\bin\Debug\netcoreapp2.
 D:\coProject\Meituan\MeituanApi\Libraries\MeituanApi.Core\bin\Debug\netcoreapp2.1\Microsoft.AspNetCore.Http.Abstractions.xml
 D:\coProject\Meituan\MeituanApi\Libraries\MeituanApi.Core\bin\Debug\netcoreapp2.1\Microsoft.Extensions.Configuration.Abstractions.xml
 D:\coProject\Meituan\MeituanApi\Libraries\MeituanApi.Core\bin\Debug\netcoreapp2.1\Microsoft.Extensions.Http.xml
-D:\coProject\Meituan\MeituanApi\Libraries\MeituanApi.Core\obj\Debug\netcoreapp2.1\MeituanApi.Core.csproj.CoreCompileInputs.cache
+D:\coProject\Meituan\MeituanApi\Libraries\MeituanApi.Core\obj\Debug\netcoreapp2.1\MeituanApi.Core.csprojAssemblyReference.cache
 D:\coProject\Meituan\MeituanApi\Libraries\MeituanApi.Core\obj\Debug\netcoreapp2.1\MeituanApi.Core.AssemblyInfoInputs.cache
 D:\coProject\Meituan\MeituanApi\Libraries\MeituanApi.Core\obj\Debug\netcoreapp2.1\MeituanApi.Core.AssemblyInfo.cs
+D:\coProject\Meituan\MeituanApi\Libraries\MeituanApi.Core\obj\Debug\netcoreapp2.1\MeituanApi.Core.csproj.CoreCompileInputs.cache
 D:\coProject\Meituan\MeituanApi\Libraries\MeituanApi.Core\obj\Debug\netcoreapp2.1\MeituanApi.Core.csproj.CopyComplete
 D:\coProject\Meituan\MeituanApi\Libraries\MeituanApi.Core\obj\Debug\netcoreapp2.1\MeituanApi.Core.dll
 D:\coProject\Meituan\MeituanApi\Libraries\MeituanApi.Core\obj\Debug\netcoreapp2.1\MeituanApi.Core.pdb

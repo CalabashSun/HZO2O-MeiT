@@ -178,7 +178,7 @@ namespace MeituanApi.Data.External.Receive
         /// <summary>
         /// 餐盒数量
         /// </summary>
-        public int box_num { get; set; }
+        public decimal box_num { get; set; }
         /// <summary>
         /// 	餐盒价格
         /// </summary>
@@ -203,5 +203,28 @@ namespace MeituanApi.Data.External.Receive
         /// 商品所在的口袋，0为1号口袋，1为2号口袋，以此类推，如有需求请在开发者中心订阅
         /// </summary>
         public int cart_id { get; set; }
+    }
+
+    public class OrderCharges
+    {
+        public decimal mt_charge { get; set; }
+
+        public decimal poi_charge { get; set; }
+        public decimal reduce_fee { get; set; }
+
+        public string remark { get; set; }
+        /// <summary>
+        /// 活动类型：1-新用户立减；2-满减；5-满赠；9-使用红包；11-提前下单减；17-折扣商品；18-美团专送再减；19-点评券；20-第二份半价；21-会员免配送费；22-门店新客立减；23-买赠；24-平台新用户立减；25-满减配送费；30-阶梯满减配送费；46-外卖加价购；100-满返商家代金券；101-使用商家代金券；103-进店领券；118-商品券；
+        /// </summary>
+        public int type { get; set; }
+    }
+
+
+    public class PoiReceivedDetail
+    {
+        /// <summary>
+        /// 商家应收款，单位为分
+        /// </summary>
+        public long wmPoiReceiveCent { get; set; }
     }
 }

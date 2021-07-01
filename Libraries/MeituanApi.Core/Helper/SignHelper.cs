@@ -8,7 +8,7 @@ namespace MeituanApi.Core.Helper
 {
     public class SignHelper
     {
-        private static string Key = "728e9163c49542ac20c4bf473e731f66";
+        private static string Key = "40e1ab22b1b4fe662096d2babf9fea2b";
         /// <summary>
         /// 签名
         /// </summary>
@@ -16,7 +16,7 @@ namespace MeituanApi.Core.Helper
         /// <param name="t">传入this</param>
         /// <param name="ignorePropertys">忽略哪个属性不签名</param>
         /// <returns></returns>
-        public static string Sign<T>(T t,string url, string[] ignorePropertys = null)
+        public static string Sign<T>(T t,string url, string[] ignorePropertys = null,string keyInfo="")
         {
             Dictionary<string, string> dic = new Dictionary<string, string>();
             var propertys = t.GetType().GetProperties();
@@ -53,7 +53,7 @@ namespace MeituanApi.Core.Helper
                     }
                 }
             }
-            return Sign(dic,url);
+            return Sign(dic,url,keyInfo);
         }
 
 
@@ -85,8 +85,12 @@ namespace MeituanApi.Core.Helper
         /// </summary>
         /// <param name="dicParams">签名参数</param>
         /// <returns></returns>
-        public static string Sign(Dictionary<string, string> dicParams,string url)
+        public static string Sign(Dictionary<string, string> dicParams,string url,string keyInfo="")
         {
+            if (keyInfo == "")
+            {
+                keyInfo = Key;
+            }
             //将字典中按ASCII码升序排序
             Dictionary<string, string> dicDestSign = new Dictionary<string, string>();
             dicDestSign = AsciiDictionary(dicParams);
@@ -101,7 +105,7 @@ namespace MeituanApi.Core.Helper
             }
             var string1 = sb.ToString();
             //在stringA最后拼接上key=(API密钥的值)得到stringSignTemp字符串
-            var stringSignTemp = string1.Substring(0,string1.Length-1)+Key;
+            var stringSignTemp = string1.Substring(0,string1.Length-1)+keyInfo;
             stringSignTemp = url + "?" + stringSignTemp;
             var sign = MD5(stringSignTemp, "UTF-8").ToLower();//对stringSignTemp进行MD5运算，再将得到的字符串所有字符转换为大写，得到sign值signValue。 
             return sign;

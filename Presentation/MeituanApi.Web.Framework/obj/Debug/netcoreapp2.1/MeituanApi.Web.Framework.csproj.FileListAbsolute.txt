@@ -7,9 +7,9 @@ D:\coProject\Meituan\MeituanApi\Presentation\MeituanApi.Web.Framework\bin\Debug\
 D:\coProject\Meituan\MeituanApi\Presentation\MeituanApi.Web.Framework\bin\Debug\netcoreapp2.1\MeituanApi.Core.pdb
 D:\coProject\Meituan\MeituanApi\Presentation\MeituanApi.Web.Framework\bin\Debug\netcoreapp2.1\Microsoft.AspNetCore.CookiePolicy.xml
 D:\coProject\Meituan\MeituanApi\Presentation\MeituanApi.Web.Framework\obj\Debug\netcoreapp2.1\MeituanApi.Web.Framework.csprojAssemblyReference.cache
-D:\coProject\Meituan\MeituanApi\Presentation\MeituanApi.Web.Framework\obj\Debug\netcoreapp2.1\MeituanApi.Web.Framework.csproj.CoreCompileInputs.cache
 D:\coProject\Meituan\MeituanApi\Presentation\MeituanApi.Web.Framework\obj\Debug\netcoreapp2.1\MeituanApi.Web.Framework.AssemblyInfoInputs.cache
 D:\coProject\Meituan\MeituanApi\Presentation\MeituanApi.Web.Framework\obj\Debug\netcoreapp2.1\MeituanApi.Web.Framework.AssemblyInfo.cs
+D:\coProject\Meituan\MeituanApi\Presentation\MeituanApi.Web.Framework\obj\Debug\netcoreapp2.1\MeituanApi.Web.Framework.csproj.CoreCompileInputs.cache
 D:\coProject\Meituan\MeituanApi\Presentation\MeituanApi.Web.Framework\obj\Debug\netcoreapp2.1\MeituanApi.Web.Framework.csproj.CopyComplete
 D:\coProject\Meituan\MeituanApi\Presentation\MeituanApi.Web.Framework\obj\Debug\netcoreapp2.1\MeituanApi.Web.Framework.dll
 D:\coProject\Meituan\MeituanApi\Presentation\MeituanApi.Web.Framework\obj\Debug\netcoreapp2.1\MeituanApi.Web.Framework.pdb

@@ -10,17 +10,17 @@ using Newtonsoft.Json;
 
 namespace MeituanApi.Services.MeiT
 {
-    public class MeiTComment 
+    public class MeiTComment
     {
-        public static string QueryComment(IHttpClientFactory httpFactory)
+        public static RMeitCommentsModel QueryComment(IHttpClientFactory httpFactory, string shopId, string start, string end, int offset, int pageSize)
         {
             var commentModel = new SOrderComment
             {
-                app_poi_code = "4856022",
-                start_time = DateTime.Now.AddDays(-1).ToString("yyyyMMdd"),
-                end_time = DateTime.Now.AddDays(-1).ToString("yyyyMMdd"),
-                pageoffset = 1,
-                pagesize = 20,
+                app_poi_code = shopId,
+                start_time = start,
+                end_time = end,
+                pageoffset = offset,
+                pagesize = pageSize,
                 replyStatus = -1
             };
             commentModel.sig = SignHelper.Sign<SOrderComment>(commentModel, MeiTAction.orderComment);
@@ -34,14 +34,14 @@ namespace MeituanApi.Services.MeiT
                 {
                     foreach (var commentParam in commentParams)
                     {
-                        connectParams+= commentParam.Key+"="+commentParam.Value+"&";
+                        connectParams += commentParam.Key + "=" + commentParam.Value + "&";
                     }
                 }
 
                 connectParams = connectParams.Substring(0, connectParams.Length - 1);
                 var getUrl = MeiTAction.orderComment + "?" + connectParams;
                 var response = client.GetAsync(getUrl).Result.Content.ReadAsStringAsync().Result;
-                return response;
+                return JsonConvert.DeserializeObject<RMeitCommentsModel>(response);
             }
             catch (Exception e)
             {
@@ -49,5 +49,5 @@ namespace MeituanApi.Services.MeiT
             }
 
         }
-    }     
+    }
 }

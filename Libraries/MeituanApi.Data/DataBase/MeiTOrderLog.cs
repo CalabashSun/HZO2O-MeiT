@@ -12,6 +12,12 @@ namespace MeituanApi.Data.DataBase
 
         public string OrderContext { get;set; }
 
+        public string OrderPoiReceiveDetail { get; set; }
+
+        public string OrderExtras { get; set; }
+
         public DateTime CreateTime { get; set; }
+
+        public int IsHandle { get; set; }
     }
 }

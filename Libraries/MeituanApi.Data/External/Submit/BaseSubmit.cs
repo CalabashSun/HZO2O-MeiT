@@ -14,7 +14,7 @@ namespace MeituanApi.Data.External.Submit
         /// <summary>
         /// 美团分配给APP方的id
         /// </summary>
-        public string app_id { get; set; } = "2863";
+        public string app_id { get; set; } = "4356";
         /// <summary>
         /// 参数签名
         /// </summary>

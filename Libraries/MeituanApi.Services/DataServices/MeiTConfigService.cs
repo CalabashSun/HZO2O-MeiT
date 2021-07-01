@@ -34,7 +34,7 @@ namespace MeituanApi.Services.DataServices
 
         public List<MeiTConfig> AllMetTShop()
         {
-            var selectSql = $"select * from  dbo.MeiTConfig where ShopId=2";
+            var selectSql = $"select * from MeiTConfig where ShopType=2";
             return _Conn.Query<MeiTConfig>(selectSql).ToList();
         }
     }

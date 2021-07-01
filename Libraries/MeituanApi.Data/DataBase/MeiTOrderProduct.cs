@@ -29,7 +29,7 @@ namespace MeituanApi.Data.DataBase
 
         public decimal? ShopPrice { get; set; }
 
-        public int BoxNum { get; set; }
+        public decimal BoxNum { get; set; }
 
         public decimal BoxPrice { get; set; }
 

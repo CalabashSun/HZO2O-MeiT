@@ -1,3 +1,6 @@
+D:\coProject\Meituan\MeituanApi\Presentation\MeituanApi.Web\bin\Release\netcoreapp2.1\appsettings.Development.json
+D:\coProject\Meituan\MeituanApi\Presentation\MeituanApi.Web\bin\Release\netcoreapp2.1\appsettings.json
+D:\coProject\Meituan\MeituanApi\Presentation\MeituanApi.Web\bin\Release\netcoreapp2.1\Properties\launchSettings.json
 D:\coProject\Meituan\MeituanApi\Presentation\MeituanApi.Web\bin\Release\netcoreapp2.1\MeituanApi.Web.deps.json
 D:\coProject\Meituan\MeituanApi\Presentation\MeituanApi.Web\bin\Release\netcoreapp2.1\MeituanApi.Web.runtimeconfig.json
 D:\coProject\Meituan\MeituanApi\Presentation\MeituanApi.Web\bin\Release\netcoreapp2.1\MeituanApi.Web.runtimeconfig.dev.json
@@ -18,3 +21,4 @@ D:\coProject\Meituan\MeituanApi\Presentation\MeituanApi.Web\obj\Release\netcorea
 D:\coProject\Meituan\MeituanApi\Presentation\MeituanApi.Web\obj\Release\netcoreapp2.1\MeituanApi.Web.csproj.CopyComplete
 D:\coProject\Meituan\MeituanApi\Presentation\MeituanApi.Web\obj\Release\netcoreapp2.1\MeituanApi.Web.dll
 D:\coProject\Meituan\MeituanApi\Presentation\MeituanApi.Web\obj\Release\netcoreapp2.1\MeituanApi.Web.pdb
+D:\coProject\Meituan\MeituanApi\Presentation\MeituanApi.Web\obj\Release\netcoreapp2.1\MeituanApi.Web.genruntimeconfig.cache

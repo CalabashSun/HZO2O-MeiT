@@ -23,7 +23,7 @@ namespace MeituanApi.Data.MeiT
             return response;
         }
 
-        public static RFoodList ProductList(IHttpClientFactory httpFactory, string shopId)
+        public static RFoodList ProductList(IHttpClientFactory httpFactory, string shopId,string appId="",string appSecret="")
         {
             var foodListModel = new SFoodList
             {
@@ -31,7 +31,12 @@ namespace MeituanApi.Data.MeiT
                 offset = 0,
                 limit = 199
             };
-            foodListModel.sig = SignHelper.Sign<SFoodList>(foodListModel,MeiTAction.foodList);
+            if (appId != "" && appSecret != "")
+            {
+                foodListModel.app_id = appId;
+            }
+
+            foodListModel.sig = SignHelper.Sign<SFoodList>(foodListModel,MeiTAction.foodList,null,appSecret);
             var client = httpFactory.CreateClient();
             FormUrlEncodedContent content = new FormUrlEncodedContent(SignHelper.ToDictionary(foodListModel));
             try

@@ -33,7 +33,6 @@ namespace MeituanApi.Web.Controllers
         }
 
         public IActionResult FoodList(string zpShopId)
-
         {
             if (string.IsNullOrEmpty(zpShopId))
             {
@@ -47,7 +46,9 @@ namespace MeituanApi.Web.Controllers
             }
 
             var shopId = shopInfo.ShopId;
-            var result = MeiTProduct.ProductList(_httpClientFactory, shopId);
+            var appId = shopInfo.AppKey;
+            var appSecret = shopInfo.AppSecret;
+            var result = MeiTProduct.ProductList(_httpClientFactory, shopId,appId,appSecret);
             try
             {
                 DealShopProduct(result, shopId);
@@ -111,7 +112,7 @@ namespace MeituanApi.Web.Controllers
                         if (exist != null)
                         {
                             //1.相同
-                            if (exist.MeiTUpdateTime == rFood.utime&&exist.ProductPrice==rFood.price)
+                            if (exist.ProductPrice==rFood.price)
                             {
                                 exist.DealState = 1;
                                 continue;

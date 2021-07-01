@@ -14,9 +14,9 @@ D:\coProject\Meituan\MeituanApi\Libraries\MeituanApi.Services\bin\Debug\netcorea
 D:\coProject\Meituan\MeituanApi\Libraries\MeituanApi.Services\bin\Debug\netcoreapp2.1\Microsoft.AspNetCore.Http.Abstractions.xml
 D:\coProject\Meituan\MeituanApi\Libraries\MeituanApi.Services\bin\Debug\netcoreapp2.1\Microsoft.AspNetCore.Hosting.Abstractions.xml
 D:\coProject\Meituan\MeituanApi\Libraries\MeituanApi.Services\obj\Debug\netcoreapp2.1\MeituanApi.Services.csprojAssemblyReference.cache
-D:\coProject\Meituan\MeituanApi\Libraries\MeituanApi.Services\obj\Debug\netcoreapp2.1\MeituanApi.Services.csproj.CoreCompileInputs.cache
 D:\coProject\Meituan\MeituanApi\Libraries\MeituanApi.Services\obj\Debug\netcoreapp2.1\MeituanApi.Services.AssemblyInfoInputs.cache
 D:\coProject\Meituan\MeituanApi\Libraries\MeituanApi.Services\obj\Debug\netcoreapp2.1\MeituanApi.Services.AssemblyInfo.cs
+D:\coProject\Meituan\MeituanApi\Libraries\MeituanApi.Services\obj\Debug\netcoreapp2.1\MeituanApi.Services.csproj.CoreCompileInputs.cache
 D:\coProject\Meituan\MeituanApi\Libraries\MeituanApi.Services\obj\Debug\netcoreapp2.1\MeituanApi.Services.csproj.CopyComplete
 D:\coProject\Meituan\MeituanApi\Libraries\MeituanApi.Services\obj\Debug\netcoreapp2.1\MeituanApi.Services.dll
 D:\coProject\Meituan\MeituanApi\Libraries\MeituanApi.Services\obj\Debug\netcoreapp2.1\MeituanApi.Services.pdb
